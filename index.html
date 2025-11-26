@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>GlowSalon — MiniApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <button id="btnBack" class="icon-btn hidden" title="Назад">←</button>
+      <div class="brand">GlowSalon</div>
+      <button id="btnProfile" class="icon-btn" title="Профиль">👤</button>
+    </header>
+
+    <main id="view" class="view"></main>
+
+    <nav class="bottom-nav">
+      <button data-route="#/" class="nav-btn active">Главная</button>
+      <button data-route="#/bookings" class="nav-btn">Мои записи</button>
+      <button data-route="#/chat" class="nav-btn">Чат</button>
+    </nav>
+  </div>
+
+  <template id="tpl-service-card">
+    <article class="card service-card">
+      <div class="row">
+        <div class="col">
+          <h4 class="service-name"></h4>
+          <div class="service-desc muted"></div>
+        </div>
+        <div class="col right">
+          <div class="service-price"></div>
+          <button class="btn small choose">Выбрать</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
